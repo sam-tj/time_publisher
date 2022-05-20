@@ -11,11 +11,11 @@ Enter nearest ntp server address. To find servers, can refer this link -> https:
 
 replace server list from -> 
 > pool 0.ubuntu.pool.ntp.org iburst 
-
+> 
 > pool 1.ubuntu.pool.ntp.org iburst
-
+> 
 > pool 2.ubuntu.pool.ntp.org iburst
-
+> 
 > pool 3.ubuntu.pool.ntp.org iburst
 
 to required servers. Use iburst to make specific server high priority.
@@ -27,9 +27,7 @@ Now there should be an ip address of local network. Should be in series of 192.1
 
 7. sudo ufw allow from any to any port 123 proto udp
 
-
 ------------
-
 
 ### NTP setup for ESP32 system.
 
@@ -37,6 +35,9 @@ Now there should be an ip address of local network. Should be in series of 192.1
 
 1. Update the IP address in the code in place of NTP server.
 2. Update the timezone in the code according to the required location.
+
+
+------------
 
 Available time attributes in time struct.
 - int tm_sec;			/* Seconds.	[0-60] (1 leap second) */
