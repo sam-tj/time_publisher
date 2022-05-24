@@ -28,26 +28,27 @@ In ROS2, these values are published to time_publisher topic to demonstrate the o
 1. sudo apt-get update
 2. sudo apt-get install ntp
 3. sntp --version
-4. sudo nano /etc/ntp.conf or sudo gedit /etc/ntp.conf
+4. sudo nano /etc/ntp.conf OR 
+        sudo gedit /etc/ntp.conf
 
 Enter nearest ntp server address. To find servers, can refer this link -> https://support.ntp.org/bin/view/Servers/NTPPoolServers
 
 replace server list from -> 
-    > pool 0.ubuntu.pool.ntp.org iburst 
-    > 
-    > pool 1.ubuntu.pool.ntp.org iburst
-    > 
-    > pool 2.ubuntu.pool.ntp.org iburst
-    > 
-    > pool 3.ubuntu.pool.ntp.org iburst
+> pool 0.ubuntu.pool.ntp.org iburst 
+> 
+> pool 1.ubuntu.pool.ntp.org iburst
+> 
+> pool 2.ubuntu.pool.ntp.org iburst
+> 
+> pool 3.ubuntu.pool.ntp.org iburst
 
 to required servers. Use iburst to make specific server high priority. 
 example -> 
-    > server 0.europe.pool.ntp.org
-    > server 1.europe.pool.ntp.org
+> server 0.europe.pool.ntp.org
+> server 1.europe.pool.ntp.org
 
-5. sudo service ntp restart
-6. sudo service ntp status
+1. sudo service ntp restart
+2. sudo service ntp status
 
 Now there should be an ip address of local network. Should be in series of 192.168.x.x or 10.x.x.x
 
