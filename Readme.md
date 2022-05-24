@@ -1,6 +1,7 @@
 # NTP connection setup for ROS2 
 
 This is an example project which allows to connect to local NTP server like a computer or to a global NTP server and then sends time as message as ros2 topic.
+
 The code can be modified according to application.
 
 ------------
@@ -15,8 +16,10 @@ Sample video pending [..](.. "..").
 ------------
 
 ### About
-This example provides instructions to create NTP server on a linux system (Ubuntu in this case). The esp-32 conencts to the local server and saves the time values as Real time clock. This clock can then be used to publish messges with time stamp allowing a synchronized message publishing.
+This example provides instructions to create NTP server on a linux system (Ubuntu in this case). The esp-32 conencts to the local server and saves the time values as Real time clock. 
+This clock can then be used to publish messges with time stamp allowing a synchronized message publishing.
 The date and time values are sent over ROS2 via micro-ros.
+
 In ROS2, these values are published to time_publisher topic to demonstrate the output for this example. The value is an String which can be modified accroding to the requirements.
 
 ------------
@@ -45,6 +48,7 @@ replace server list from ->
 to required servers. Use iburst to make specific server high priority. 
 example -> 
 > server 0.europe.pool.ntp.org
+> 
 > server 1.europe.pool.ntp.org
 
 1. sudo service ntp restart
@@ -80,12 +84,12 @@ Now there should be an ip address of local network. Should be in series of 192.1
 ------------
 
 Available time attributes in time struct.
-- int tm_sec;			/* Seconds.	[0-60] (1 leap second) */
-- int tm_min;			/* Minutes.	[0-59] */
-- int tm_hour;			/* Hours.	[0-23] */
-- int tm_mday;			/* Day.		[1-31] */
-- int tm_mon;			/* Month.	[0-11] */
-- int tm_year;			/* Year	- 1900.  */
-- int tm_wday;			/* Day of week.	[0-6] */
-- int tm_yday;			/* Days in year.[0-365]	*/
-- int tm_isdst;			/* DST.		[-1/0/1]*/
+- int tm_sec;           /* Seconds.	[0-60] (1 leap second) */
+- int tm_min;           /* Minutes.	[0-59] */
+- int tm_hour;          /* Hours.	[0-23] */
+- int tm_mday;          /* Day.		[1-31] */
+- int tm_mon;           /* Month.	[0-11] */
+- int tm_year;          /* Year	- 1900.  */
+- int tm_wday;          /* Day of week.	[0-6] */
+- int tm_yday;          /* Days in year.[0-365]	*/
+- int tm_isdst;         /* DST.		[-1/0/1]*/
