@@ -51,8 +51,8 @@ example ->
 > 
 > server 1.europe.pool.ntp.org
 
-1. sudo service ntp restart
-2. sudo service ntp status
+5. sudo service ntp restart
+6. sudo service ntp status
 
 Now there should be an ip address of local network. Should be in series of 192.168.x.x or 10.x.x.x
 
@@ -65,7 +65,7 @@ Now there should be an ip address of local network. Should be in series of 192.1
 ------------
 
 1. Update the IP address in the code in place of NTP server.
-2. Update the timezone in the code according to the required location.
+2. Update the timezone in the code according to the required location. ( https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv )
 
 ------------
 
